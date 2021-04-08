@@ -34,42 +34,27 @@ let menuItems = [
 
 const menuDiv = document.querySelector(".menu-button");
 
+//Step 1
 function menuMaker(menuArray){
-const menuItem = document.createElement("div");
-const list = document.createElement("ul");
-const listItems1 = document.createElement("li");
-const listItems2 = document.createElement("li");
-const listItems3 = document.createElement("li");
-const listItems4 = document.createElement("li");
-const listItems5 = document.createElement("li");
-const listItems6 = document.createElement("li");
-
-menuItem.appendChild(list);
-menuItem.appendChild(listItems1);
-menuItem.appendChild(listItems2);
-menuItem.appendChild(listItems3);
-menuItem.appendChild(listItems4);
-menuItem.appendChild(listItems5);
-menuItem.appendChild(listItems6);
-
-
-menuItem.classList.add("menu");
-
-listItems1.textContent = menuArray[0]
-listItems2.textContent = menuArray[1]
-listItems3.textContent = menuArray[2]
-listItems4.textContent = menuArray[3]
-listItems5.textContent = menuArray[4]
-listItems6.textContent = menuArray[6]
-
+    const menuItem = document.createElement("div");
+    const list = document.createElement("ul");
+      menuItem.appendChild(list)
+      menuItem.classList.add("menu")
 
 //Step 2
+menuItems.forEach(item => {
+  const listItem =document.createElement("li");
+    listItem.textContent = item
+      list.appendChild(listItem)
+})
+
+//Step 3 & 4
 const menuButton = document.querySelector('.header')
-menuButton.addEventListener("click", (event) => {
-  menuItem.classList.toggle("menu--open");
+   menuButton.addEventListener("click", (event) => {
+      menuItem.classList.toggle("menu--open");
 });
 
-//Step 3
+//Step 5
 return menuItem;
 }
 
