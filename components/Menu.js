@@ -54,12 +54,14 @@ const menuButton = document.querySelector('.header')
       menuItem.classList.toggle("menu--open");
 });
 
+
 //Step 5
 return menuItem;
 }
 
-//Step 4
+//Step 6
 menuItems.forEach((menuArray) => {
   const menuItem = menuMaker(menuArray);
   return document.querySelector('.header').appendChild(menuItem);
 });
+

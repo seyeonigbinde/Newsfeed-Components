@@ -164,7 +164,14 @@ data.forEach((articleObj) => {
 
 
 //Step 5
-const test = articleMaker({ title: "New Article", date: "Apr 7th, 2021", firstParagraph: "This is Great", secondParagraph: "This is Awesome", thirdParagraph: "This is Fanstastic" });
-console.log(test);
-let newContainer = document.querySelector(".articles")
-newContainer.appendChild(test)
+const test = articleMaker({ 
+  title: "New Article", 
+  date: "Apr 7th, 2021", 
+  firstParagraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati iusto repellat modi! Rerum error possimus libero assumenda quo ratione eveniet.", 
+  secondParagraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati iusto repellat modi! Rerum error possimus libero assumenda quo ratione eveniet.", 
+  thirdParagraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati iusto repellat modi! Rerum error possimus libero assumenda quo ratione eveniet." 
+});
+
+  let newContainer = document.querySelector(".articles")
+      newContainer.appendChild(test)
+
