@@ -155,9 +155,16 @@ articleButton.addEventListener("click", (event) => {
 return article;
 }
 
+
 //Step 4
 data.forEach((articleObj) => {
   const article = articleMaker(articleObj);
   return articles.appendChild(article);
 });
 
+
+//Step 5
+const test = articleMaker({ title: "New Article", date: "Apr 7th, 2021", firstParagraph: "This is Great", secondParagraph: "This is Awesome", thirdParagraph: "This is Fanstastic" });
+console.log(test);
+let newContainer = document.querySelector(".articles")
+newContainer.appendChild(test)
